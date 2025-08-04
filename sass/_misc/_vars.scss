@@ -1,12 +1,14 @@
-$maxWidth: 1920;//ширина макета в граф. редакторе
+$maxWidth: 1960;//ширина макета в граф. редакторе
 $minWidth: 320;
-$maxWidthContainer: 1170;//ширина ограничивающего контейнера без паддингов
+$maxWidthContainer: 1904;//ширина ограничивающего контейнера без паддингов
 $containerPaddings: 30;//сумма левого и правого паддингов ограничивающего контейнера
 $maxContainerWidth: $maxWidthContainer + $containerPaddings;// итоговая ширина ограничивающего контейнера
 
 // colors
 $accent: red;
 $text: #000;
+$text-gray: #8E95A0;
+$text-dark: #7F8D9A;
 
 // paths
 	// use: background-image: url($icos + 'arrow-right.svg');
@@ -36,6 +38,9 @@ $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1170px);
 
 $gutter: $grid-gutter-width;
 
-$reg: 'raleway-v22-latin_cyrillic-regular', sans-serif;
+$reg: 'MontRegular', sans-serif;
+$semi: 'MontSemiBold', sans-serif;
+$bold: 'MontBold', sans-serif;
+$hev: 'MontHeavy', sans-serif;
 
 

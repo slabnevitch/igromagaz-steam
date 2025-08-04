@@ -4,18 +4,43 @@
     <meta charset="utf-8">
     <title>Главная страница</title>
     <meta name="description" content="">
-    <link rel="icon" href="img/favicon.png">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="16x16">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="favic.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <header class="header"></header>
-    <footer class="footer"></footer>
+    <!-- - этот миксин включать только если требуют SEO-->
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__inner">
+          <div class="header__logo"><img src="img/logo.svg" alt="alt"></div>
+          <nav class="header__nav nav-header"><a href="#" class="nav-header__link nav-header__link--support"><i class="nav-header__icon icon-support"></i><span>Техподдержка</span></a><a href="#" class="nav-header__link nav-header__link--reviews"><i class="nav-header__icon icon-reviews"></i><span>Отзывы</span></a><a href="#" class="nav-header__link nav-header__link--keys"><i class="nav-header__icon icon-keys"></i><span>Ключи к играм</span></a><a href="#" class="nav-header__link nav-header__link--cards"><i class="nav-header__icon icon-cards"></i><span>Карты пополнения</span></a>
+          </nav>
+          <ul class="header__socials socials-header">
+            <li class="socials-header__item"><a href="#" class="socials-header__link"><img src="img/icons/vk.svg" alt="alt"></a></li>
+            <li class="socials-header__item"><a href="#" class="socials-header__link"><img src="img/icons/tg.svg" alt="alt"></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="main__left">
+        <h1 class="main__title">Пополнить баланс steam быстро с моментальной комиссией – igromagaz</h1>
+      </div>
+    </section>
     
     
     
     
-    <script src="js/libs/counter/counter.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

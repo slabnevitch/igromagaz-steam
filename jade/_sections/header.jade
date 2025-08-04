@@ -1,1 +1,20 @@
 header.header
+	.header__wrapper
+		.header__inner
+			.header__logo
+				img(src="img/logo.svg" alt="alt")
+
+			nav.header__nav.nav-header
+				- var menus = [{title: 'Техподдержка', icon: 'support'}, {title: 'Отзывы', icon: 'reviews'}, {title: 'Ключи к играм', icon: 'keys'}, {title: 'Карты пополнения', icon: 'cards'}];
+
+				each item, i in menus
+					a(href="#" class="nav-header__link nav-header__link--" + item.icon)
+						i(class="nav-header__icon icon-" + item.icon)
+						span= item.title
+
+			ul.header__socials.socials-header
+				- var socs = ['vk', 'tg'];
+				each item in socs
+					li.socials-header__item
+						a(href="#").socials-header__link
+							img(src="img/icons/" + item + '.svg' alt="alt")
