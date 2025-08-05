@@ -512,17 +512,55 @@ textarea {
   position: relative;
   display: -ms-flexbox;
   display: flex;
+  min-height: 328.29px;
   border-radius: 55px;
   background-color: #000;
   color: #fff;
   background-image: url(../img/bg.png);
   background-position: right 0;
   background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.main__container:after {
+  content: "";
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+  width: 2px;
+  height: calc(100% - 117px);
+  background-color: #fff;
 }
 
 .main__left {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
+  padding: 82px 58px 82px 56px;
+  padding-top: 82px;
+  padding-right: 58px;
+  padding-bottom: 82px;
+  padding-right: 56px;
+}
+@media (max-width: 1904px) {
+  .main__left {
+    padding-top: calc(22px + 60 * ((100vw - 320px) / 1584));
+  }
+}
+@media (max-width: 1904px) {
+  .main__left {
+    padding-right: calc(22px + 36 * ((100vw - 320px) / 1584));
+  }
+}
+@media (max-width: 1904px) {
+  .main__left {
+    padding-bottom: calc(22px + 60 * ((100vw - 320px) / 1584));
+  }
+}
+@media (max-width: 1904px) {
+  .main__left {
+    padding-right: calc(17px + 39 * ((100vw - 320px) / 1584));
+  }
 }
 
 .main__right {
@@ -551,11 +589,11 @@ textarea {
 }
 
 .main__subtitle {
-  font-size: 22px;
+  font-size: 21.5px;
 }
 @media (max-width: 1904px) {
   .main__subtitle {
-    font-size: calc(10px + 12 * ((100vw - 320px) / 1584));
+    font-size: calc(10px + 11.5 * ((100vw - 320px) / 1584));
   }
 }
 

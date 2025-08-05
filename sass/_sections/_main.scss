@@ -4,16 +4,34 @@
 .main__container {
 	position: relative;
 	display: flex;
+	min-height: 328.29px;
 	border-radius: 55px;
 	background-color: #000;
 	color: #fff;
 	background-image: url(../img/bg.png);
 	background-position: right 0;
 	background-repeat: no-repeat;
-	// background-size: cover;
+	background-size: auto 100%;
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: 58px;
+		left: 50%;
+		transform: translateX(50%);
+		width: 2px;
+		height: calc(100% - calc(58px + 59px));
+		background-color: #fff;
+	}
 }
+	
 .main__left {
 	flex: 0 0 50%;
+	padding: 82px 58px 82px 56px;
+	@include adaptive-value('padding-top', 82, 22, 1);
+	@include adaptive-value('padding-right', 58, 22, 1);
+	@include adaptive-value('padding-bottom', 82, 22, 1);
+	@include adaptive-value('padding-right', 56, 17, 1);
 }
 .main__right {
 	flex: 0 0 50%;
@@ -32,7 +50,7 @@
 }
 .main__subtitle {
 	// font-size: 22px;
-	@include adaptive-value('font-size', 22, 10, 1);
+	@include adaptive-value('font-size', 21.5, 10, 1);
 }
 .main__visual {
 	position: absolute;
