@@ -1,0 +1,42 @@
+/*--------------------main----------------------*/
+.main {}
+.main__wrapper {}
+.main__container {
+	position: relative;
+	display: flex;
+	border-radius: 55px;
+	background-color: #000;
+	color: #fff;
+	background-image: url(../img/bg.png);
+	background-position: right 0;
+	background-repeat: no-repeat;
+	// background-size: cover;
+}
+.main__left {
+	flex: 0 0 50%;
+}
+.main__right {
+	flex: 0 0 50%;
+
+	p{
+		font-family: $bold;
+		// font-size: 26px;
+		@include adaptive-value('font-size', 26, 10.6, 1);
+	}
+}
+.main__title {
+	margin-bottom: 6px;
+	font-family: $hev;
+	// font-size: 39px;
+	@include adaptive-value('font-size', 39, 17.86, 1);
+}
+.main__subtitle {
+	// font-size: 22px;
+	@include adaptive-value('font-size', 22, 10, 1);
+}
+.main__visual {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/*--------------------END main----------------------*/ 

@@ -507,4 +507,63 @@ textarea {
 }
 
 /*--------------------END header----------------------*/
+/*--------------------main----------------------*/
+.main__container {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 55px;
+  background-color: #000;
+  color: #fff;
+  background-image: url(../img/bg.png);
+  background-position: right 0;
+  background-repeat: no-repeat;
+}
+
+.main__left {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+
+.main__right {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+.main__right p {
+  font-family: "MontBold", sans-serif;
+  font-size: 26px;
+}
+@media (max-width: 1904px) {
+  .main__right p {
+    font-size: calc(10.6px + 15.4 * ((100vw - 320px) / 1584));
+  }
+}
+
+.main__title {
+  margin-bottom: 6px;
+  font-family: "MontHeavy", sans-serif;
+  font-size: 39px;
+}
+@media (max-width: 1904px) {
+  .main__title {
+    font-size: calc(17.86px + 21.14 * ((100vw - 320px) / 1584));
+  }
+}
+
+.main__subtitle {
+  font-size: 22px;
+}
+@media (max-width: 1904px) {
+  .main__subtitle {
+    font-size: calc(10px + 12 * ((100vw - 320px) / 1584));
+  }
+}
+
+.main__visual {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*--------------------END main----------------------*/
 /*# sourceMappingURL=maps/main.css.map */
