@@ -1,15 +1,32 @@
 /*--------------------main----------------------*/
 .main {
-	margin-top: -37px;
+	@include min-screen($md){
+		margin-top: -37px;
+		
+	}
 }
 .main__wrapper {
 	position: relative;
-	padding-top: 43px;
-	padding-bottom: 24px;
 	// background-image: url(../img/bg_overall.png);
 	// background-position: right 0;
 	// background-repeat: no-repeat;
 	// background-size: auto 100%;
+
+	@include max-screen($md){
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+	@include min-screen($md){
+		padding-top: 43px;
+		padding-bottom: 24px;
+	}
+	& > .main__bg{
+		@include max-screen($md){
+			display: none;
+		}		
+	}
 }
 .main__bg{
 	position: absolute;
@@ -20,19 +37,33 @@
 	object-position: right 0;
 	z-index: 2;
 
-	// @include max-screen(1920px){
-	// 	right: 25px;
-	// }
 }
 .main__container {
 	position: relative;
 	display: flex;
-	min-height: 328.29px;
 	// height: 328.29px;
 	border-radius: 55px;
 	background-color: #000;
 	color: #fff;
-	
+	overflow-x: hidden;
+
+	@include max-screen($mainStop){
+		flex-direction: column;
+		padding-right: 38%;
+	}
+	@include max-screen($md){
+		border-radius: 18px;
+		
+	}
+	@include max-screen($xs){
+		padding-right: 30%;
+	}
+	@include min-screen($md){
+		min-height: 328.29px;
+	}
+	@include max-screen($xss){
+		padding-right: 0;
+	}
 
 	&:after{
 		content: '';
@@ -44,36 +75,105 @@
 		height: calc(100% - calc(58px + 59px));
 		background-color: #fff;
 		z-index: 2;
+
+		@include max-screen($mainStop){
+			display: none;
+		}
+	}
+
+	.main__bg{
+		right: 0;
+		@include min-screen($md){
+			display: none;
+		}
+		@include max-screen($min){
+			right: -40px;
+		}
 	}
 }
 	
 .main__left {
 	position: relative;
 	z-index: 2;
-	flex: 0 0 50%;
 	padding: 82px 58px 82px 56px;
 	@include adaptive-value('padding-top', 80, 22, 1);
 	@include adaptive-value('padding-right', 58, 22, 1);
 	@include adaptive-value('padding-bottom', 74, 22, 1);
 	@include adaptive-value('padding-left', 56, 17, 1);
+	@include adaptive-value('margin-bottom', 130, 0, 1);
+
+	@include max-screen($mainStop){
+		padding-bottom: 0;
+		padding-left: 50px;
+	}
+	@include max-screen($md){
+		margin-bottom: 28px;
+	}
+	@include max-screen($sm){
+		padding-left: 17px;
+		padding-top: 22px;
+	}
+	@include min-screen($mainStop){
+		flex: 0 0 50%;
+		margin-bottom: 0;
+	}
 }
 .main__right {
 	position: relative;
 	z-index: 2;
-	flex: 0 0 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-right: 343px;
-	padding-top: 15px;
 	padding-bottom: 15px;
+	@include adaptive-value('padding-top', 50, 10, 1);
+	max-width: prc(917,1660);
 	@include adaptive-value('padding-left', 71, 22, 1);
+
+	@include max-screen($mainStop){
+		padding-left: 50px;
+		padding-bottom: 65px;
+	}
+	@include max-screen($lg){
+		max-width: prc(613,634);
+	}
+	@include max-screen($md){
+		padding-bottom: 22px;
+		padding-top: 0;
+	}
+	@include max-screen($sm){
+		padding-left: 17px;
+	}
+	@include min-screen($mainStop){
+		max-width: none;
+		flex: 0 0 50%;
+		padding-right: 343px;
+		padding-top: 15px;
+	}
 
 	& > *{
 		margin-bottom: 10px;
 	}
 	& > *:last-child{
 		margin-bottom: 0;
+	}
+
+	
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50px;
+		height: 3px;
+		width: prc(357,917);
+		background-color: #fff;
+
+		@include max-screen($md){
+			display: none;
+		}
+
+		@include min-screen($mainStop){
+			display: none;
+		}
 	}
 
 	p{
@@ -83,6 +183,10 @@
 		@include adaptive-value('font-size', 26, 10.6, 1);
 		line-height: math.div(35,26);
 
+		@include max-screen($xss){
+			padding-right: 35%;
+			font-size: 10px;
+		}
 	}
 }
 .main__title {
@@ -91,11 +195,25 @@
 	// font-size: 39px;
 	@include adaptive-value('font-size', 39, 17.86, 1);
 	line-height: math.div(50,39);
+
+	@include max-screen($xss){
+		padding-right: 30%;
+		font-size: 17px;
+	}
+	@include max-screen($xsss){
+		padding-right: 20%;
+	}
 }
 .main__subtitle {
 	margin: 0;
 	// font-size: 22px;
 	@include adaptive-value('font-size', 21.5, 10, 1);
+
+	@include max-screen($xss){
+		padding-right: 20%;
+		font-size: 10px;
+		color: #99999F;
+	}
 }
 .main__visual {
 	position: absolute;
