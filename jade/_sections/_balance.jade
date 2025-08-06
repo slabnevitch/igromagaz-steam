@@ -7,7 +7,7 @@ section.balance
 					label.form-balance__label.form-balance__label--login
 						i.form-balance__icon.form-balance__user-icon.icon-user
 						input(autocomplete="off" type="text" name="name" class="form-balance__input" placeholder="Ваш логин")
-						button.form-balance__modal(type="button")
+						button.form-balance__modal(type="button" data-graph-animation="custom" data-graph-path="login")
 							i.form-balance__icon-info.icon-info
 							| Где взять логин?
 					
@@ -28,19 +28,25 @@ section.balance
 					.form-balance__row.form-balance__variants
 						each item, i in variants
 							label.form-balance__summ
-								input.form__check(type='radio' name='checkbox-summ' value='chekbox'+i checked=i==2?true:false)
-								span.label.form-balance__summ-val= item + ' ₽'
+								input.form__check.form-balance__summ-check(type='radio' name='checkbox-summ' value=item checked=i==2?true:false)
+								span.form-balance__summ-val= item + ' ₽'
 
-					.form-balance__row.form-balance__variants
-						.form-balance__paysystem.paysystem
-							.paysystem
+					.form-balance__row.form-balance__paysystems
+						label.paysystem
+							input.form__check.paysystem__check(type='radio' name='paysystem' value="sbp" checked)
+							span.paysystem__val.paysystem__val--sbp
 								img(src="img/systems/sbp.png" alt="alt")
-							.paysystem.paysystem--multi
-								- var parts = ['mscd', 'visa', 'mir'];
+						
+						label.paysystem.paysystem--multi
+							- var parts = ['mscd', 'visa', 'mir'];
+							input.form__check.paysystem__check(type='radio' name='paysystem' value="multi")
+							span.paysystem__val.paysystem__val--multi
 								each part in parts
-									.paysystem__part
+									span(class="paysystem__part paysystem__part--"+part)
 										img(src="img/systems/"+part+".png" alt="alt")
-							.paysystem
+						label.paysystem
+							input.form__check.paysystem__check(type='radio' name='paysystem' value="pay")
+							span.paysystem__val.paysystem__val--pay
 								img(src="img/systems/pay.png" alt="alt")
 						
 				// button.btn.btn-wide(type='submit') Получить консультацию
@@ -57,7 +63,7 @@ section.balance
 				.form-balance__buttons
 					- var btns = ['Введите логин Steam', 'Хочу комиссию 3%!'];
 					each btn, i in btns
-						button(type="button").form-balance__button= btn
+						button(type="button" class=i==1?"form-balance__button form-balance__button--blue":"form-balance__button")= btn
 							span.form-balance__button-icon
 								i.icon-arrow
 				
@@ -65,6 +71,7 @@ section.balance
 					label.form__custom
 						input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked='checked' required='required')
 						span.form__custom-chek
+							span.icon-check
 					span.form__policy Я подтверждаю, что указал именно логин Steam, а не никнейм или ссылку и ознакомился с #[a(href="#") Пользовательским соглашением]
 
 				.form-balance__info-title Важная информация:

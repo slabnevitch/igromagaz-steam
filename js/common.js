@@ -62,5 +62,7 @@
 				addit_classes : ['wallet-select']
 			});
 		}
+
+		const modal = new GraphModal();
 	});
 })();

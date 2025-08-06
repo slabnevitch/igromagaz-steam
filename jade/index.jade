@@ -7,6 +7,19 @@ block title
 block content
 	include _sections/_main
 	include _sections/_balance
+	.graph-modal
+		.graph-modal__container(role='dialog', aria-modal='true', data-graph-target='login')
+			//- button.btn-reset.graph-modal__close.js-modal-close(aria-label='Закрыть модальное окно')
+			.graph-modal__content
+				.login-modal
+					.login-modal__title Где взять логин Steam?
+					p.login-modal__text Логин это то что вы указываете при входе в Steam. Если вы укажите неверный логин, то средства уйдут другому пользователю.
+
+					.login-modal__pict._fit
+						img._fit-img(src="img/modal-img.jpg" alt="alt")
+
+					.login-modal__bottom
+						button.login-modal__btn.js-modal-close(type="button") Понятно
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

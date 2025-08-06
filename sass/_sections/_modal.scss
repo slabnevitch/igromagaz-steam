@@ -1,0 +1,61 @@
+/*------------------------------------------*/
+.graph-modal {
+	background-color: rgba(#000, .5);
+}
+.graph-modal__container {
+	width: 100%;
+	max-width: 415px;
+
+}
+.btn-reset {}
+.graph-modal__close {}
+.js-modal-close {}
+.graph-modal__content {
+	padding: 30px 40px;
+	border-radius: 35px;
+	background: #fff;
+}
+.login-modal {}
+.login-modal__title {
+	margin-bottom: 20px;
+	font-size: 28px;
+	font-family: $bold;
+	text-align: center;
+}
+.login-modal__text {
+	margin-bottom: 26px;
+	font-size: 15px;
+	color: #737373;
+}
+.login-modal__pict {
+	padding-bottom: 0;
+	margin-bottom: 20px;
+	aspect-ratio: 350 / 158;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.login-modal__bottom {
+	text-align: center;
+}
+.login-modal__btn {
+	@include but-null;
+	display: inline-flex;
+	width: 100%;
+	height: 59px;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 30px;
+	font-size: 28px;
+	font-family: $bold;
+	color: #fff;
+	background-color: #1078FA;
+	border-radius: 20px;		
+
+	@media (any-hover: hover) { //только для устройств с ховером
+
+			&:hover{
+				background-color: lighten(#1078FA, 5%);
+			}
+		}
+}
+/*--------------------END ----------------------*/ 

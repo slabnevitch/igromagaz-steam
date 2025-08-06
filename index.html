@@ -53,7 +53,7 @@
             <div class="form-balance__form">
               <label class="form-balance__label form-balance__label--login"><i class="form-balance__icon form-balance__user-icon icon-user"></i>
                 <input autocomplete="off" type="text" name="name" placeholder="Ваш логин" class="form-balance__input">
-                <button type="button" class="form-balance__modal"><i class="form-balance__icon-info icon-info"></i>Где взять логин?</button>
+                <button type="button" data-graph-animation="custom" data-graph-path="login" class="form-balance__modal"><i class="form-balance__icon-info icon-info"></i>Где взять логин?</button>
               </label>
               <div style="display:flex;" class="form-balance__row form-balance__wallet">
                 <label class="form-balance__label form-balance__label--wallet"><i class="form-balance__icon form-balance__cash-icon icon-cash"></i>
@@ -70,28 +70,28 @@
               </div>
               <div class="form-balance__row form-balance__variants">
                 <label class="form-balance__summ">
-                  <input type="radio" name="checkbox-summ" value="chekbox0" class="form__check"><span class="label form-balance__summ-val">100 ₽</span>
+                  <input type="radio" name="checkbox-summ" value="100" class="form__check form-balance__summ-check"><span class="form-balance__summ-val">100 ₽</span>
                 </label>
                 <label class="form-balance__summ">
-                  <input type="radio" name="checkbox-summ" value="chekbox1" class="form__check"><span class="label form-balance__summ-val">200 ₽</span>
+                  <input type="radio" name="checkbox-summ" value="200" class="form__check form-balance__summ-check"><span class="form-balance__summ-val">200 ₽</span>
                 </label>
                 <label class="form-balance__summ">
-                  <input type="radio" name="checkbox-summ" value="chekbox2" checked class="form__check"><span class="label form-balance__summ-val">500 ₽</span>
+                  <input type="radio" name="checkbox-summ" value="500" checked class="form__check form-balance__summ-check"><span class="form-balance__summ-val">500 ₽</span>
                 </label>
                 <label class="form-balance__summ">
-                  <input type="radio" name="checkbox-summ" value="chekbox3" class="form__check"><span class="label form-balance__summ-val">2000 ₽</span>
+                  <input type="radio" name="checkbox-summ" value="2000" class="form__check form-balance__summ-check"><span class="form-balance__summ-val">2000 ₽</span>
                 </label>
               </div>
-              <div class="form-balance__row form-balance__variants">
-                <div class="form-balance__paysystem paysystem">
-                  <div class="paysystem"><img src="img/systems/sbp.png" alt="alt"></div>
-                  <div class="paysystem paysystem--multi">
-                    <div class="paysystem__part"><img src="img/systems/mscd.png" alt="alt"></div>
-                    <div class="paysystem__part"><img src="img/systems/visa.png" alt="alt"></div>
-                    <div class="paysystem__part"><img src="img/systems/mir.png" alt="alt"></div>
-                  </div>
-                  <div class="paysystem"><img src="img/systems/pay.png" alt="alt"></div>
-                </div>
+              <div class="form-balance__row form-balance__paysystems">
+                <label class="paysystem">
+                  <input type="radio" name="paysystem" value="sbp" checked class="form__check paysystem__check"><span class="paysystem__val paysystem__val--sbp"><img src="img/systems/sbp.png" alt="alt"></span>
+                </label>
+                <label class="paysystem paysystem--multi">
+                  <input type="radio" name="paysystem" value="multi" class="form__check paysystem__check"><span class="paysystem__val paysystem__val--multi"><span class="paysystem__part paysystem__part--mscd"><img src="img/systems/mscd.png" alt="alt"></span><span class="paysystem__part paysystem__part--visa"><img src="img/systems/visa.png" alt="alt"></span><span class="paysystem__part paysystem__part--mir"><img src="img/systems/mir.png" alt="alt"></span></span>
+                </label>
+                <label class="paysystem">
+                  <input type="radio" name="paysystem" value="pay" class="form__check paysystem__check"><span class="paysystem__val paysystem__val--pay"><img src="img/systems/pay.png" alt="alt"></span>
+                </label>
               </div>
             </div>
             <!-- button.btn.btn-wide(type='submit') Получить консультацию-->
@@ -109,11 +109,11 @@
             </div>
             <div class="form-balance__buttons">
               <button type="button" class="form-balance__button">Введите логин Steam<span class="form-balance__button-icon"><i class="icon-arrow"></i></span></button>
-              <button type="button" class="form-balance__button">Хочу комиссию 3%!<span class="form-balance__button-icon"><i class="icon-arrow"></i></span></button>
+              <button type="button" class="form-balance__button form-balance__button--blue">Хочу комиссию 3%!<span class="form-balance__button-icon"><i class="icon-arrow"></i></span></button>
             </div>
             <div class="form__custom-policy">
               <label class="form__custom">
-                <input type="checkbox" name="checkbox" value="chekbox1" checked="checked" required="required" class="form__check"><span class="form__custom-chek"></span>
+                <input type="checkbox" name="checkbox" value="chekbox1" checked="checked" required="required" class="form__check"><span class="form__custom-chek"><span class="icon-check"></span></span>
               </label><span class="form__policy">Я подтверждаю, что указал именно логин Steam, а не никнейм или ссылку и ознакомился с <a href="#">Пользовательским соглашением</a></span>
             </div>
             <div class="form-balance__info-title">Важная информация:</div>
@@ -122,8 +122,23 @@
         </form>
       </div>
     </section>
+    <div class="graph-modal">
+      <div role="dialog" aria-modal="true" data-graph-target="login" class="graph-modal__container">
+        <div class="graph-modal__content">
+          <div class="login-modal">
+            <div class="login-modal__title">Где взять логин Steam?</div>
+            <p class="login-modal__text">Логин это то что вы указываете при входе в Steam. Если вы укажите неверный логин, то средства уйдут другому пользователю.</p>
+            <div class="login-modal__pict _fit"><img src="img/modal-img.jpg" alt="alt" class="_fit-img"></div>
+            <div class="login-modal__bottom">
+              <button type="button" class="login-modal__btn js-modal-close">Понятно</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
     
+    <script src="js/libs/graph-modal/dist/graph-modal.min.js"></script>
     <script src="js/libs/lc_select/lc_select.js"></script>
     
     
