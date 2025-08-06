@@ -49,24 +49,24 @@
       <div class="balance__wrapper">
         <form action="#" class="form balance__form form-balance">
           <div class="form-balance__left">
-            <h2 class="balance__title"></h2>
+            <h2 class="balance__title">Пополняй баланс Steam Россия</h2>
             <div class="form-balance__form">
-              <label class="form-balance__label"><i class="form-balance__user-icon icon-user"></i>
+              <label class="form-balance__label form-balance__label--login"><i class="form-balance__icon form-balance__user-icon icon-user"></i>
                 <input autocomplete="off" type="text" name="name" placeholder="Ваш логин" class="form-balance__input">
                 <button type="button" class="form-balance__modal"><i class="form-balance__icon-info icon-info"></i>Где взять логин?</button>
               </label>
-              <div class="form-balance__row form-balance__wallet">
-                <label class="form-balance__label"><i class="form-balance__cash-icon icon-cash"></i>
-                  <input autocomplete="off" type="text" name="name" placeholder="Ваш логин" class="form-balance__input">
+              <div style="display:flex;" class="form-balance__row form-balance__wallet">
+                <label class="form-balance__label form-balance__label--wallet"><i class="form-balance__icon form-balance__cash-icon icon-cash"></i>
+                  <input autocomplete="off" type="text" name="name" placeholder="Сумма мин. 30 ₽, макс. 50 000 ₽" class="form-balance__input">
                 </label>
-              </div>
-              <div class="form-balance__wallet-select">
-                <select id="select-vallet" name="wallet-select">
-                  <option data-flag="ru" value="ru">₽</option>
-                  <option data-flag="kaz" value="kaz">₸</option>
-                  <option data-flag="ua" value="ua">₴</option>
-                  <option data-flag="sng" value="sng">$</option>
-                </select>
+                <div class="form-balance__select">
+                  <select id="select-vallet" name="wallet-select">
+                    <option data-flag="ru" value="ru">₽</option>
+                    <option data-flag="kaz" value="kaz">₸</option>
+                    <option data-flag="ua" value="ua">₴</option>
+                    <option data-flag="sng" value="sng">$</option>
+                  </select>
+                </div>
               </div>
               <div class="form-balance__row form-balance__variants">
                 <label class="form-balance__summ">

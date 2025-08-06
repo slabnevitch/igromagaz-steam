@@ -7,6 +7,7 @@
 				wrap_width: '100%', 
 				pre_placeh_opt: true,
 				min_for_search : 2,
+				enable_search: false
 			});
 		}
 	});

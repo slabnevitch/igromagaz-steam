@@ -2,20 +2,130 @@
 .balance {}
 .balance__wrapper {}
 .form {}
-.balance__form {}
+.balance__form {
+	display: flex;
+	gap: 30px;
+}
 .form-balance {}
-.form-balance__left {}
-.balance__title {}
+.form-balance__left {
+	flex: 0 0 50%;
+	padding: 30px 56px;
+	border-radius: 55px;
+	background: #4AB8E6;
+	background: linear-gradient(131deg,rgba(74, 184, 230, 1) 0%, rgba(0, 102, 255, 1) 100%);
+}
+.balance__title {
+	margin-bottom: 21px;
+	color: #fff;
+	font-size: 30px;
+	font-family: $semi;
+	text-align: center;
+}
 .form-balance__form {}
-.form-balance__label {}
-.form-balance__user-icon {}
-.icon-user {}
-.form-balance__input {}
-.form-balance__modal {}
+.form-balance__label {
+	position: relative;
+	display: flex;
+	align-items: center;
+	column-gap: 15px;
+	height: 109px;
+	margin-bottom: 19px;
+	border-radius: 23px;
+	background-color: #fff;
+
+	&--login{
+		padding-right: 28px;
+	}
+	&--wallet{
+		flex: 1 1 auto;
+		margin-bottom: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+.form-balance__icon{
+	position: absolute;
+	left: 29px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: $text-gray;
+}
+.form-balance__user-icon {
+	font-size: 33.52px;
+}
+.form-balance__input {
+	padding-left: 90px;
+	font-size: 24px;
+	font-family: $semi;
+	@include placecolor($text-gray);
+}
+.form-balance__modal {
+	@include but-null();
+	padding: 8px 22px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	column-gap: 7px;
+	border-radius: 65px;
+	background-color: #1179F9;
+	color: #fff;
+	font-family: $semi;
+	font-size: 21px;
+}
 .form-balance__icon-info {}
 .icon-info {}
 .form-balance__row {}
-.form-balance__wallet {}
+.form-balance__wallet {
+	display: flex;
+	column-gap: 2px;
+	border-radius: 23px;
+	// background-color: #fff;
+}
+.form-balance__select {
+	flex: 0 0 calc(100% / 4);
+	display: flex;
+	align-items: center;
+	padding-right: 53px;
+	justify-content: center;
+	background-color: #fff;
+	border-top-right-radius: 23px;
+	border-bottom-right-radius: 23px;
+
+	.lcslt-wrap {
+		width: 100%;
+	}
+	.lcslt {
+		justify-content: flex-end;
+		padding-right: 26px;
+		font-size: 37px;
+		font-family: $bold;
+		color: #1179F9;
+
+	}
+	.lcslt:not(.lcslt-multiple)::after {
+	  content: "\e909";
+	  width: 11px;
+	  height: 20px;
+	  display: block;
+	  border: none;
+	  display: block;
+	  position: absolute;
+	  right: 6px;
+	  transition: transform 0.3s ease;
+
+	  font-family: "icomoon" !important;
+	  speak: never;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	  line-height: 1;
+	  font-size: 20px;
+	}
+
+	.lcslt.lcslt_dd-open::after {
+	  transform: rotate(90deg);
+	}
+}
 .form-balance__cash-icon {}
 .icon-cash {}
 .form-balance__wallet-select {}
@@ -28,7 +138,10 @@
 .paysystem {}
 .paysystem--multi {}
 .paysystem__part {}
-.form-balance__right {}
+.form-balance__right {
+	flex: 0 0 50%;
+	border-radius: 55px;
+}
 .form-balance__table {}
 .form-balance__table-row {}
 .form-balance__table-key {}

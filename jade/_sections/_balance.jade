@@ -2,30 +2,29 @@ section.balance
 	.balance__wrapper
 		form(action="#" class="form balance__form form-balance")
 			.form-balance__left
-				h2.balance__title
+				h2.balance__title Пополняй баланс Steam Россия
 				.form-balance__form
-					label.form-balance__label
-						i.form-balance__user-icon.icon-user
+					label.form-balance__label.form-balance__label--login
+						i.form-balance__icon.form-balance__user-icon.icon-user
 						input(autocomplete="off" type="text" name="name" class="form-balance__input" placeholder="Ваш логин")
 						button.form-balance__modal(type="button")
 							i.form-balance__icon-info.icon-info
 							| Где взять логин?
 					
-					.form-balance__row.form-balance__wallet
-						label.form-balance__label
-							i.form-balance__cash-icon.icon-cash
-							input(autocomplete="off" type="text" name="name" class="form-balance__input" placeholder="Ваш логин")
+					.form-balance__row.form-balance__wallet(style="display:flex;")
+						label.form-balance__label.form-balance__label--wallet
+							i.form-balance__icon.form-balance__cash-icon.icon-cash
+							input(autocomplete="off" type="text" name="name" class="form-balance__input" placeholder="Сумма мин. 30 ₽, макс. 50 000 ₽")
 
-					- var flags = [{name: 'ru', symbol: '₽'}, {name: 'kaz', symbol: '₸'}, {name: 'ua', symbol: '₴'}, {name: 'sng', symbol: '$'}];
-					
-					- var variants = ['100', '200', '500', '2000'];
-					
-					.form-balance__wallet-select
+							- var flags = [{name: 'ru', symbol: '₽'}, {name: 'kaz', symbol: '₸'}, {name: 'ua', symbol: '₴'}, {name: 'sng', symbol: '$'}];
+							
+						.form-balance__select
 							select(id="select-vallet" name="wallet-select")
 								each flag, i in flags
 									option(data-flag=flag.name value=flag.name)= flag.symbol
 
 					
+					- var variants = ['100', '200', '500', '2000'];
 					.form-balance__row.form-balance__variants
 						each item, i in variants
 							label.form-balance__summ
