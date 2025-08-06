@@ -1,0 +1,71 @@
+section.balance
+	.balance__wrapper
+		form(action="#" class="form balance__form form-balance")
+			.form-balance__left
+				h2.balance__title
+				.form-balance__form
+					label.form-balance__label
+						i.form-balance__user-icon.icon-user
+						input(autocomplete="off" type="text" name="name" class="form-balance__input" placeholder="Ваш логин")
+						button.form-balance__modal(type="button")
+							i.form-balance__icon-info.icon-info
+							| Где взять логин?
+					
+					.form-balance__row.form-balance__wallet
+						label.form-balance__label
+							i.form-balance__cash-icon.icon-cash
+							input(autocomplete="off" type="text" name="name" class="form-balance__input" placeholder="Ваш логин")
+
+					- var flags = [{name: 'ru', symbol: '₽'}, {name: 'kaz', symbol: '₸'}, {name: 'ua', symbol: '₴'}, {name: 'sng', symbol: '$'}];
+					
+					.form-balance__wallet-select
+						- var variants = ['100', '200', '500', '2000'];
+							select(id="select-vallet" name="wallet-select")
+								each flag, i in flags
+									option(data-flag=flag.name)= flag.symbol
+
+					
+					.form-balance__row.form-balance__variants
+						each item, i in variants
+							label.form-balance__summ
+								input.form__check(type='radio' name='checkbox-summ' value='chekbox'+i checked=i==2?true:false)
+								span.label.form-balance__summ-val= item + ' ₽'
+
+					.form-balance__row.form-balance__variants
+						.form-balance__paysystem.paysystem
+							.paysystem
+								img(src="img/systems/sbp.png" alt="alt")
+							.paysystem.paysystem--multi
+								- var parts = ['mscd', 'visa', 'mir'];
+								each part in parts
+									.paysystem__part
+										img(src="img/systems/"+part+".png" alt="alt")
+							.paysystem
+								img(src="img/systems/pay.png" alt="alt")
+						
+				// button.btn.btn-wide(type='submit') Получить консультацию
+
+			
+			.form-balance__right
+				.form-balance__table
+					- var tabs = ['Получите на баланс Steam:', 'Комиссия сервиса:'];
+					each item, i in tabs
+						.form-balance__table-row
+							.form-balance__table-key= item
+							.form-balance__table-val 0₽
+
+				.form-balance__buttons
+					- var btns = ['Введите логин Steam', 'Хочу комиссию 3%!'];
+					each btn, i in btns
+						button(type="button").form-balance__button= btn
+							span.form-balance__button-icon
+								i.icon-arrow
+				
+				.form__custom-policy
+					label.form__custom
+						input.form__check(type='checkbox' name='checkbox' value='chekbox1' checked='checked' required='required')
+						span.form__custom-chek
+					span.form__policy Я подтверждаю, что указал именно логин Steam, а не никнейм или ссылку и ознакомился с #[a(href="#") Пользовательским соглашением]
+
+				.form-balance__info-title Важная информация:
+				p.form-balance__info-text Средства на вашем Steam-кошельке доступны для приобретения любых игр в магазине платформы, а также для покупок внутри игр, где предусмотрена оплата через Steam.

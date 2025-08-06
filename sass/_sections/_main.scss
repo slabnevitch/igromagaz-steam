@@ -215,23 +215,4 @@
 		color: #99999F;
 	}
 }
-.main__visual {
-	position: absolute;
-	// right: prc(50,1904);
-	right: 45px;
-	top: prc(-33,328.29);
-	// aspect-ratio: 381/395;
-	// width: prc(426,1904);
-	height: prc(395,328.29);
-	width: 426px;
-	// height: 395px;
-	outline: 1px solid red;
-
-	img{
-		// width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-	}
-}
 /*--------------------END main----------------------*/ 

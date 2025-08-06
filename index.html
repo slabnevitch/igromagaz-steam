@@ -45,6 +45,83 @@
         </div>
       </div>
     </section>
+    <section class="balance">
+      <div class="balance__wrapper">
+        <form action="#" class="form balance__form form-balance">
+          <div class="form-balance__left">
+            <h2 class="balance__title"></h2>
+            <div class="form-balance__form">
+              <label class="form-balance__label"><i class="form-balance__user-icon icon-user"></i>
+                <input autocomplete="off" type="text" name="name" placeholder="Ваш логин" class="form-balance__input">
+                <button type="button" class="form-balance__modal"><i class="form-balance__icon-info icon-info"></i>Где взять логин?</button>
+              </label>
+              <div class="form-balance__row form-balance__wallet">
+                <label class="form-balance__label"><i class="form-balance__cash-icon icon-cash"></i>
+                  <input autocomplete="off" type="text" name="name" placeholder="Ваш логин" class="form-balance__input">
+                </label>
+              </div>
+              <div class="form-balance__wallet-select">
+                <select id="select-vallet" name="wallet-select">
+                  <option data-flag="ru">₽</option>
+                  <option data-flag="kaz">₸</option>
+                  <option data-flag="ua">₴</option>
+                  <option data-flag="sng">$</option>
+                </select>
+              </div>
+              <div class="form-balance__row form-balance__variants">
+                <label class="form-balance__summ">
+                  <input type="radio" name="checkbox-summ" value="chekbox0" class="form__check"><span class="label form-balance__summ-val">100 ₽</span>
+                </label>
+                <label class="form-balance__summ">
+                  <input type="radio" name="checkbox-summ" value="chekbox1" class="form__check"><span class="label form-balance__summ-val">200 ₽</span>
+                </label>
+                <label class="form-balance__summ">
+                  <input type="radio" name="checkbox-summ" value="chekbox2" checked class="form__check"><span class="label form-balance__summ-val">500 ₽</span>
+                </label>
+                <label class="form-balance__summ">
+                  <input type="radio" name="checkbox-summ" value="chekbox3" class="form__check"><span class="label form-balance__summ-val">2000 ₽</span>
+                </label>
+              </div>
+              <div class="form-balance__row form-balance__variants">
+                <div class="form-balance__paysystem paysystem">
+                  <div class="paysystem"><img src="img/systems/sbp.png" alt="alt"></div>
+                  <div class="paysystem paysystem--multi">
+                    <div class="paysystem__part"><img src="img/systems/mscd.png" alt="alt"></div>
+                    <div class="paysystem__part"><img src="img/systems/visa.png" alt="alt"></div>
+                    <div class="paysystem__part"><img src="img/systems/mir.png" alt="alt"></div>
+                  </div>
+                  <div class="paysystem"><img src="img/systems/pay.png" alt="alt"></div>
+                </div>
+              </div>
+            </div>
+            <!-- button.btn.btn-wide(type='submit') Получить консультацию-->
+          </div>
+          <div class="form-balance__right">
+            <div class="form-balance__table">
+              <div class="form-balance__table-row">
+                <div class="form-balance__table-key">Получите на баланс Steam:</div>
+                <div class="form-balance__table-val">0₽</div>
+              </div>
+              <div class="form-balance__table-row">
+                <div class="form-balance__table-key">Комиссия сервиса:</div>
+                <div class="form-balance__table-val">0₽</div>
+              </div>
+            </div>
+            <div class="form-balance__buttons">
+              <button type="button" class="form-balance__button">Введите логин Steam<span class="form-balance__button-icon"><i class="icon-arrow"></i></span></button>
+              <button type="button" class="form-balance__button">Хочу комиссию 3%!<span class="form-balance__button-icon"><i class="icon-arrow"></i></span></button>
+            </div>
+            <div class="form__custom-policy">
+              <label class="form__custom">
+                <input type="checkbox" name="checkbox" value="chekbox1" checked="checked" required="required" class="form__check"><span class="form__custom-chek"></span>
+              </label><span class="form__policy">Я подтверждаю, что указал именно логин Steam, а не никнейм или ссылку и ознакомился с <a href="#">Пользовательским соглашением</a></span>
+            </div>
+            <div class="form-balance__info-title">Важная информация:</div>
+            <p class="form-balance__info-text">Средства на вашем Steam-кошельке доступны для приобретения любых игр в магазине платформы, а также для покупок внутри игр, где предусмотрена оплата через Steam.</p>
+          </div>
+        </form>
+      </div>
+    </section>
     
     
     

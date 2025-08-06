@@ -813,19 +813,5 @@ textarea {
   }
 }
 
-.main__visual {
-  position: absolute;
-  right: 45px;
-  top: -10.0520880928%;
-  height: 120.3204483841%;
-  width: 426px;
-  outline: 1px solid red;
-}
-.main__visual img {
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
 /*--------------------END main----------------------*/
 /*# sourceMappingURL=maps/main.css.map */
