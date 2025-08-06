@@ -16,12 +16,12 @@ section.balance
 							i.form-balance__icon.form-balance__cash-icon.icon-cash
 							input(autocomplete="off" type="text" name="name" class="form-balance__input" placeholder="Сумма мин. 30 ₽, макс. 50 000 ₽")
 
-							- var flags = [{name: 'ru', symbol: '₽'}, {name: 'kaz', symbol: '₸'}, {name: 'ua', symbol: '₴'}, {name: 'sng', symbol: '$'}];
+							- var flags = [{name: 'ru', symbol: '<i class="wallet-target icon-ru"></i>'}, {name: 'kaz', symbol: '<i class="wallet-target icon-kaz"></i>'}, {name: 'ua', symbol: '<i class="wallet-target icon-ua"></i>'}, {name: 'sng', symbol: '<i class="wallet-target icon-sng"></i>'}];
 							
 						.form-balance__select
 							select(id="select-vallet" name="wallet-select")
 								each flag, i in flags
-									option(data-flag=flag.name value=flag.name)= flag.symbol
+									option(data-flag=flag.symbol value=flag.name selected=i==0?true:false)
 
 					
 					- var variants = ['100', '200', '500', '2000'];

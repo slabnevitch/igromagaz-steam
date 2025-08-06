@@ -471,10 +471,10 @@
         /* set dropdown position */
         this.set_dd_position = function() {
             const dd            = document.querySelector('#lc-select-dd'),
-                  at_offset     = active_trigger.getBoundingClientRect(),
+                  at_offset     = active_trigger.closest('.form-balance__select').getBoundingClientRect(),
                   dd_w          = at_offset.width.toFixed(2),
                   at_h          = parseInt(active_trigger.clientHeight, 10) + parseInt(getComputedStyle(active_trigger)['borderTopWidth'], 10),
-                  y_pos         = parseInt(at_offset.y, 10) + parseInt(window.pageYOffset, 10) + at_h;
+                  y_pos         = parseInt(at_offset.y, 10) + parseInt(window.pageYOffset, 10);
 
             // left pos control - also checking side overflows
             let left = at_offset.left.toFixed(2);
