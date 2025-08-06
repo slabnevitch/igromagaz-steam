@@ -66,6 +66,10 @@
 	position: relative;
 	flex-shrink: 0;
 	margin-right: 33px;
+
+	@include max-screen($sm){
+		margin-right: 11px;
+	}
 }
 .form__check {
 	@include checkbox;
@@ -83,6 +87,12 @@
 	height: 30px;
 	background-color: #4AB8E6;
 	border-radius: 7px;
+
+	@include max-screen($sm){
+		width: 17px;
+		height: 17px;
+		border-radius: 4px;
+	}
 
 	@media (any-hover: hover) { //только для устройств с ховером
 				&:hover{
@@ -103,6 +113,10 @@
 		font-size: 14px;
 		color: #fff;
 		display: none;
+
+		@include max-screen($sm){
+			font-size: 8px;
+		}
 	}
 }
 .form__area{
@@ -119,6 +133,10 @@
 .form__policy {
 	font-size: 20px;
 	line-height: math.div(27,20);
+
+	@include max-screen($sm){
+		font-size: 12px;
+	}
 	a{
 		font-family: $semi;
 	}

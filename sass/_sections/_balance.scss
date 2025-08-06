@@ -17,6 +17,13 @@
 	border-radius: 55px;
 	background: #4AB8E6;
 	background: linear-gradient(131deg,rgba(74, 184, 230, 1) 0%, rgba(0, 102, 255, 1) 100%);
+
+	@include max-screen($md){
+		border-radius: 29px;
+	}
+	@include max-screen($sm){
+		padding: 16px 24px;
+	}
 }
 .balance__title {
 	margin-bottom: 21px;
@@ -24,6 +31,11 @@
 	font-size: 30px;
 	font-family: $semi;
 	text-align: center;
+
+	@include max-screen($sm){
+		margin-bottom: 11px;
+		font-size: 16px;
+	}
 }
 .form-balance__form {}
 .form-balance__label {
@@ -38,12 +50,25 @@
 
 	&--login{
 		padding-right: 28px;
+
+		@include max-screen($sm){
+			padding-right: 12px;
+		}
 	}
 	&--wallet{
 		flex: 1 1 auto;
 		margin-bottom: 0;
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
+		
+		@include max-screen($sm){
+			flex-basis: 100%;
+		}
+	}
+
+	@include max-screen($sm){
+		height: 45px;
+		border-radius: 9px;
 	}
 }
 .form-balance__icon{
@@ -52,15 +77,28 @@
 	top: 50%;
 	transform: translateY(-50%);
 	color: $text-gray;
+
+	@include max-screen($sm){
+		left: 12px;
+	}
 }
 .form-balance__user-icon {
 	font-size: 33.52px;
+
+	@include max-screen($sm){
+		font-size: 13px;
+	}
 }
 .form-balance__input {
 	padding-left: 90px;
 	font-size: 24px;
 	font-family: $semi;
 	@include placecolor($text-gray);
+
+	@include max-screen($sm){
+		padding-left: 39px;
+		font-size: 14px;
+	}
 }
 .form-balance__modal {
 	@include but-null();
@@ -74,6 +112,11 @@
 	color: #fff;
 	font-family: $semi;
 	font-size: 21px;
+
+	@include max-screen($sm){
+		padding-inline: 11px;
+		font-size: 11px;
+	}
 }
 .form-balance__icon-info {}
 .icon-info {}
@@ -88,6 +131,10 @@
 	column-gap: 2px;
 	border-radius: 23px;
 
+	@include max-screen($sm){
+		flex-wrap: wrap;
+	}
+
 	// background-color: #fff;
 }
 .form-balance__select {
@@ -99,6 +146,12 @@
 	background-color: #fff;
 	border-top-right-radius: 23px;
 	border-bottom-right-radius: 23px;
+
+	@include max-screen($sm){
+		margin-top: 10px;
+		flex: 0 0 100%;
+		border-radius: 9px;
+	}
 
 	.lcslt-wrap {
 		width: 100%;
@@ -137,6 +190,8 @@
 	.lcslt.lcslt_dd-open::after {
 	  transform: rotate(90deg);
 	}
+
+
 }
 .wallet-select{
 	&.lcslt-shown{
@@ -201,6 +256,10 @@
 }
 .form-balance__cash-icon {
 	font-size: 34px;
+
+	@include max-screen($sm){
+		font-size: 16px;
+	}
 }
 .icon-cash {}
 .form-balance__wallet-select {}
@@ -355,6 +414,10 @@
 		padding: 38px 24px 30px 30px;
 	}
 
+	@include max-screen($md){
+		border-radius: 23px;
+	}
+
 	& > *{
 		
 		&:not(:last-child){
@@ -372,7 +435,7 @@
 	justify-content: space-between;
 	font-size: 25px;
 
-	@include max-screen($md){
+	@include max-screen($sm){
 		font-size: 15px;
 	}
 	
@@ -440,11 +503,11 @@
 	}
 
 	@include max-screen($md){
-		height: 67px;
-		font-size: 12px;
 
 	}
 	@include max-screen($sm){
+		height: 67px;
+		font-size: 12px;
 		flex: 0 0 auto;
 		padding-inline: 20px;
 		border-radius: 14px;
@@ -459,7 +522,7 @@
 	border-radius: 50%;
 	border: 2px solid #fff;
 
-	@include max-screen($md){
+	@include max-screen($sm){
 		flex-basis: 36px;
 		border-width: 1px;
 	}
@@ -477,10 +540,19 @@
 .form-balance__info-title {
 	font-size: 22px;
 	color: #4E4E4E;
+
+	@include max-screen($sm){
+		font-size: 12px;
+	}
 }
 .form-balance__info-text {
+	margin: 0;
 	color: #878787;
 	font-size: 22px;
 	line-height: math.div(30,22);
+
+	@include max-screen($sm){
+		font-size: 12px;
+	}
 }
 /*--------------------END balance----------------------*/ 
