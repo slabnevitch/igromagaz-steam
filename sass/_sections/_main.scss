@@ -1,5 +1,6 @@
 /*--------------------main----------------------*/
 .main {
+	margin-bottom: 30px;
 	@include min-screen($md){
 		margin-top: -37px;
 		

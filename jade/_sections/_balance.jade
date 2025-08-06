@@ -18,11 +18,12 @@ section.balance
 
 					- var flags = [{name: 'ru', symbol: '₽'}, {name: 'kaz', symbol: '₸'}, {name: 'ua', symbol: '₴'}, {name: 'sng', symbol: '$'}];
 					
+					- var variants = ['100', '200', '500', '2000'];
+					
 					.form-balance__wallet-select
-						- var variants = ['100', '200', '500', '2000'];
 							select(id="select-vallet" name="wallet-select")
 								each flag, i in flags
-									option(data-flag=flag.name)= flag.symbol
+									option(data-flag=flag.name value=flag.name)= flag.symbol
 
 					
 					.form-balance__row.form-balance__variants
