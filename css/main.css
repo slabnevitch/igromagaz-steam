@@ -917,6 +917,7 @@ textarea {
 }
 @media only screen and (max-width: 767.98px) {
   .form-balance__label {
+    margin-bottom: 10px;
     height: 45px;
     border-radius: 9px;
   }
@@ -972,6 +973,11 @@ textarea {
     font-size: 14px;
   }
 }
+@media only screen and (max-width: 375px) {
+  .form-balance__input {
+    font-size: 11px;
+  }
+}
 
 .form-balance__modal {
   padding: 0;
@@ -1004,9 +1010,29 @@ textarea {
     font-size: 11px;
   }
 }
+@media only screen and (max-width: 375px) {
+  .form-balance__modal span {
+    display: none;
+  }
+}
+
+.form-balance__icon-info {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+@media only screen and (max-width: 480px) {
+  .form-balance__icon-info {
+    font-size: 16px;
+  }
+}
 
 .form-balance__row:not(:last-child) {
   margin-bottom: 19px;
+}
+@media only screen and (max-width: 767.98px) {
+  .form-balance__row:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .form-balance__wallet {
@@ -1038,10 +1064,12 @@ textarea {
 }
 @media only screen and (max-width: 767.98px) {
   .form-balance__select {
-    margin-top: 10px;
+    padding-inline: 14px;
+    height: 40px;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     border-radius: 9px;
+    border: 1px solid #1A1EF7;
   }
 }
 .form-balance__select .lcslt-wrap {
@@ -1054,6 +1082,11 @@ textarea {
   font-size: 37px;
   font-family: "MontBold", sans-serif;
   color: #1179F9;
+}
+@media only screen and (max-width: 767.98px) {
+  .form-balance__select .lcslt {
+    padding-right: 32px;
+  }
 }
 .form-balance__select .lcslt:not(.lcslt-multiple)::after {
   content: "\e909";
@@ -1076,6 +1109,13 @@ textarea {
   line-height: 1;
   font-size: 23px;
 }
+@media only screen and (max-width: 767.98px) {
+  .form-balance__select .lcslt:not(.lcslt-multiple)::after {
+    font-size: 13px;
+    -ms-transform: rotate(90deg) translateX(2px);
+    transform: rotate(90deg) translateX(2px);
+  }
+}
 .form-balance__select .lcslt.lcslt_dd-open::after {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -1083,15 +1123,20 @@ textarea {
 
 .wallet-select.lcslt-shown {
   box-shadow: 1.44px 4.31px 8.63px 0px rgba(0, 0, 0, 0.42), 4.31px 15.81px 15.81px 0px rgba(0, 0, 0, 0.36), 10.06px 34.5px 21.57px 0px rgba(0, 0, 0, 0.21), 18.69px 60.38px 25.88px 0px rgba(0, 0, 0, 0.06), 28.75px 94.89px 27.32px 0px rgba(0, 0, 0, 0.01);
-  border-radius: 0 23px 23px 23px;
+  border-radius: 0 9px 9px 9px;
 }
 .wallet-select .lcslt-f-wallet-select .wallet-target {
   font-size: 27px;
 }
+@media only screen and (max-width: 767.98px) {
+  .wallet-select .lcslt-f-wallet-select .wallet-target {
+    font-size: 16px;
+  }
+}
 .wallet-select .lc-select-dd-scroll {
   max-height: 400px;
   padding: 0 12px;
-  border-radius: 0 23px 23px 23px;
+  border-radius: 0 9px 9px 9px;
   background-color: #fff;
 }
 .wallet-select .lcslt-dd-opt {
@@ -1105,6 +1150,20 @@ textarea {
   border-bottom: 1px solid #1179F9;
 }
 
+.selected-wallet {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 767.98px) {
+  .selected-wallet {
+    width: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
 .flag {
   -ms-flex: 0 0 48px;
   flex: 0 0 48px;
@@ -1113,6 +1172,12 @@ textarea {
   border: 1px solid #1179F9;
   border-radius: 7px;
   overflow: hidden;
+}
+@media only screen and (max-width: 767.98px) {
+  .flag {
+    -ms-flex-preferred-size: 35px;
+    flex-basis: 35px;
+  }
 }
 .flag img {
   display: block;
@@ -1163,9 +1228,21 @@ textarea {
   border-top-left-radius: 23px;
   border-bottom-left-radius: 23px;
 }
+@media only screen and (max-width: 767.98px) {
+  .form-balance__summ:first-child .form-balance__summ-val {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
 .form-balance__summ:last-child .form-balance__summ-val {
   border-top-right-radius: 23px;
   border-bottom-right-radius: 23px;
+}
+@media only screen and (max-width: 767.98px) {
+  .form-balance__summ:last-child .form-balance__summ-val {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }
 @media (any-hover: hover) {
   .form-balance__summ {
@@ -1191,11 +1268,29 @@ textarea {
   color: #7F8D9A;
   background-color: #E0E0E0;
 }
+@media only screen and (max-width: 767.98px) {
+  .form-balance__summ-val {
+    height: 45px;
+    font-size: 13px;
+  }
+}
 
 .form-balance__paysystems {
   display: -ms-flexbox;
   display: flex;
   column-gap: 14.48px;
+}
+@media only screen and (max-width: 767.98px) {
+  .form-balance__paysystems {
+    column-gap: 7px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .form-balance__paysystems {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
 }
 
 .paysystem {
@@ -1203,9 +1298,27 @@ textarea {
   flex: 0 0 26.6990291262%;
   position: relative;
 }
+@media only screen and (max-width: 767.98px) {
+  .paysystem {
+    -ms-flex: 0 0 26.3157894737%;
+    flex: 0 0 26.3157894737%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .paysystem {
+    -ms-flex-preferred-size: calc(50% - 3.5px);
+    flex-basis: calc(50% - 3.5px);
+  }
+}
 @media (any-hover: hover) {
   .paysystem {
     cursor: pointer;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .paysystem--multi {
+    -ms-flex-order: 1;
+    order: 1;
   }
 }
 
@@ -1224,17 +1337,40 @@ textarea {
   background-color: #D4D4D4;
   border-radius: 23px;
 }
+@media only screen and (max-width: 767.98px) {
+  .paysystem__val {
+    height: 45px;
+    border-radius: 10px;
+  }
+}
 .paysystem__val img {
   display: block;
 }
 .paysystem__val--sbp img {
   width: 121px;
 }
+@media only screen and (max-width: 767.98px) {
+  .paysystem__val--sbp img {
+    width: auto;
+    height: 71.1111111111%;
+  }
+}
 .paysystem__val--multi {
   padding-inline: 25px;
 }
+@media only screen and (max-width: 767.98px) {
+  .paysystem__val--multi {
+    padding-inline: 9px;
+  }
+}
 .paysystem__val--pay img {
   width: 111px;
+}
+@media only screen and (max-width: 767.98px) {
+  .paysystem__val--pay img {
+    width: auto;
+    height: 68.1818181818%;
+  }
 }
 
 .paysystem--multi {
@@ -1250,6 +1386,17 @@ textarea {
   -ms-flex: 0 0 33.3333333333%;
   flex: 0 0 33.3333333333%;
   padding-inline: 15px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 767.98px) {
+  .paysystem__part {
+    padding-inline: 6px;
+  }
 }
 .paysystem__part:not(:last-child) {
   position: relative;
@@ -1265,11 +1412,37 @@ textarea {
   height: 34px;
   background-color: #1179F9;
 }
+@media only screen and (max-width: 767.98px) {
+  .paysystem__part:not(:last-child):after {
+    height: 16px;
+  }
+}
 .paysystem__part img {
   max-width: 100%;
+  display: inline-block;
 }
 .paysystem__part--mscd img {
   max-width: 60px;
+}
+@media only screen and (max-width: 991.98px) {
+  .paysystem__part--mscd img {
+    max-width: 80%;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .paysystem__part--mscd img {
+    max-width: 60%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .paysystem__part--mscd img {
+    max-width: 80%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .paysystem__part--mscd img {
+    max-width: 60%;
+  }
 }
 
 .form-balance__right {

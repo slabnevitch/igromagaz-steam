@@ -9,12 +9,12 @@ section.balance
 						input(autocomplete="off" type="text" name="name" class="form-balance__input" placeholder="Ваш логин")
 						button.form-balance__modal(type="button" data-graph-animation="custom" data-graph-path="login")
 							i.form-balance__icon-info.icon-info
-							| Где взять логин?
+							span Где взять логин?
 					
 					.form-balance__row.form-balance__wallet(style="display:flex;")
 						label.form-balance__label.form-balance__label--wallet
 							i.form-balance__icon.form-balance__cash-icon.icon-cash
-							input(autocomplete="off" type="text" name="name" class="form-balance__input" placeholder="Сумма мин. 30 ₽, макс. 50 000 ₽")
+							input(autocomplete="off" type="text" name="forwsumm" class="form-balance__input" placeholder="Сумма мин. 30 ₽, макс. 50 000 ₽")
 
 							- var flags = [{name: 'ru', symbol: '<i class="wallet-target icon-ru"></i>'}, {name: 'kaz', symbol: '<i class="wallet-target icon-kaz"></i>'}, {name: 'ua', symbol: '<i class="wallet-target icon-ua"></i>'}, {name: 'sng', symbol: '<i class="wallet-target icon-sng"></i>'}];
 							

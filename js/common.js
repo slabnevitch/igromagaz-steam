@@ -16,13 +16,15 @@
 						flag = selectedOption.getAttribute('data-flag'),
 						value = selectedOption.getAttribute('value'),
 						spanKey = document.createElement('SPAN');
+						spanFlag = `<span class="flag"><img src="img/flags/${selectedOption.getAttribute('value')}.png" alt="flag"/></span>`;
 						spanKey.setAttribute('title', value);
-						spanKey.innerHTML = flag,
+						addedValue = document.createElement('SPAN');//создаем новый эл-т., в кот-рый. будем помещать текст кастомного поля
+						addedValue.className = 'selected-wallet';
+						addedValue.innerHTML = spanFlag + flag,
 						selectedValueString = document.querySelector('.lcslt-f-wallet-select[data-placeh]');
 						
-					// console.log(selectedIndex)
 					selectedValueString.innerHTML = '';
-					selectedValueString.append(spanKey);
+					selectedValueString.append(addedValue);
 					
 				},
 				on_ddAppended: function(selectItem) {
@@ -53,9 +55,9 @@
 					// Добавление к результату выбора еще одного кастомного поля
 					var searchedString = document.querySelector('.wallet-select [data-placeh]'),// берем строку с результатом выбора 
 						addedValue = document.createElement('SPAN');//создаем новый эл-т., в кот-рый. будем помещать текст кастомного поля
-						addedValue.innerHTML = target_field.querySelector(`[value="${new_value}"]`).getAttribute('data-flag');//получаем значение нужного кастомного поля из data-атрибутов нативного <option>
+						addedValue.className = 'selected-wallet';
+						addedValue.innerHTML = `<span class="flag"><img src="img/flags/${target_field.querySelector(`[value="${new_value}"]`).getAttribute('value')}.png"/></span>` + target_field.querySelector(`[value="${new_value}"]`).getAttribute('data-flag');//получаем значение нужного кастомного поля из data-атрибутов нативного <option>
 
-					console.log(addedValue.innerHtml)
 					searchedString.append(addedValue);//добавляем строке с результатом выбора <span> со текстом нужного кастомного поля 
 
 	 			},
@@ -63,6 +65,17 @@
 			});
 		}
 
-		const modal = new GraphModal();
+		if(document.querySelector('.form-balance__summ-check') !== null){
+			Array.prototype.slice.call(document.querySelectorAll('.form-balance__summ-check')).forEach(function(elem) {
+				elem.addEventListener('change', function(e){
+					console.log('dfdf')
+					document.querySelector('input[name="forwsumm"]').value = this.value;
+				});
+			});
+		}
+
+		if(document.querySelector('.graph-modal') !== null){
+			const modal = new GraphModal();
+		}
 	});
 })();
