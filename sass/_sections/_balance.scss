@@ -96,6 +96,9 @@
 	font-family: $semi;
 	@include placecolor($text-gray);
 
+	@include max-screen($md){
+		font-size: 20px;
+	}
 	@include max-screen($sm){
 		padding-left: 39px;
 		font-size: 14px;
@@ -166,6 +169,9 @@
 	border-top-right-radius: 23px;
 	border-bottom-right-radius: 23px;
 
+	@include max-screen($md){
+		padding-right: 29px;
+	}
 	@include max-screen($sm){
 		padding-inline: 14px;
 		height: 40px;
@@ -406,13 +412,22 @@
 	// 	display: none;
 	// }
 
-	&--multi{
+
+
+}
+.paysystem--multi{
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		
+		@include max-screen($sm){
+			flex: 1 1 auto;
+		}
 		@include max-screen($xsss){
+			flex-basis: auto;
 			order: 1;
 		}
 	}
-
-}
 .paysystem__check{
 	&:checked + .paysystem__val{
 		background-color: #fff;
@@ -467,12 +482,6 @@
 			}
 		}
 	}
-}
-.paysystem--multi {
-	flex: 1 1 auto;
-
-	display: flex;
-	align-items: center;
 }
 .paysystem__part {
 	flex: 0 0 calc(100% / 3);

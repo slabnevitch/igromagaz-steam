@@ -967,6 +967,11 @@ textarea {
   color: #8E95A0;
   opacity: 1;
 }
+@media only screen and (max-width: 991.98px) {
+  .form-balance__input {
+    font-size: 20px;
+  }
+}
 @media only screen and (max-width: 767.98px) {
   .form-balance__input {
     padding-left: 39px;
@@ -1061,6 +1066,11 @@ textarea {
   background-color: #fff;
   border-top-right-radius: 23px;
   border-bottom-right-radius: 23px;
+}
+@media only screen and (max-width: 991.98px) {
+  .form-balance__select {
+    padding-right: 29px;
+  }
 }
 @media only screen and (max-width: 767.98px) {
   .form-balance__select {
@@ -1315,8 +1325,25 @@ textarea {
     cursor: pointer;
   }
 }
+
+.paysystem--multi {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 767.98px) {
+  .paysystem--multi {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+}
 @media only screen and (max-width: 375px) {
   .paysystem--multi {
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
     -ms-flex-order: 1;
     order: 1;
   }
@@ -1371,15 +1398,6 @@ textarea {
     width: auto;
     height: 68.1818181818%;
   }
-}
-
-.paysystem--multi {
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .paysystem__part {
