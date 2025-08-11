@@ -146,6 +146,11 @@ textarea{
 	max-width: $maxContainerWidth + px;
 	// @include row-flex();
 	// @include wrapper();
+
+	@include max-screen($min){
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 // classes for smartgrid(c) structure
 // .wrapper-smart{

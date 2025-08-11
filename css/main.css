@@ -539,6 +539,12 @@ textarea {
   padding-right: 25px;
   max-width: 1954px;
 }
+@media only screen and (max-width: 360px) {
+  [class*=__wrapper] {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
 .hidden {
   display: none !important;
@@ -688,7 +694,7 @@ textarea {
   flex-shrink: 0;
   margin-right: 33px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form__custom {
     margin-right: 11px;
   }
@@ -720,7 +726,7 @@ textarea {
   background-color: #4AB8E6;
   border-radius: 7px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form__custom-chek {
     width: 17px;
     height: 17px;
@@ -745,7 +751,7 @@ textarea {
   color: #fff;
   display: none;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form__custom-chek .icon-check {
     font-size: 8px;
   }
@@ -767,7 +773,7 @@ textarea {
   font-size: 20px;
   line-height: 1.35;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form__policy {
     font-size: 12px;
   }
@@ -837,12 +843,21 @@ textarea {
 /*--------------------ui----------------------*/
 /*--------------------END ui----------------------*/
 /*--------------------balance----------------------*/
+.balance {
+  padding-bottom: 53px;
+}
+@media only screen and (max-width: 767.98px) {
+  .balance {
+    padding-bottom: 27px;
+  }
+}
+
 .balance__form {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
-@media only screen and (max-width: 1660px) {
+@media only screen and (max-width: 767.98px) {
   .balance__form {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -857,12 +872,12 @@ textarea {
   background: #4AB8E6;
   background: linear-gradient(131deg, rgb(74, 184, 230) 0%, rgb(0, 102, 255) 100%);
 }
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 1199px) {
   .form-balance__left {
     border-radius: 29px;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__left {
     padding: 16px 24px;
   }
@@ -875,7 +890,7 @@ textarea {
   font-family: "MontSemiBold", sans-serif;
   text-align: center;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .balance__title {
     margin-bottom: 11px;
     font-size: 16px;
@@ -897,7 +912,7 @@ textarea {
 .form-balance__label--login {
   padding-right: 28px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__label--login {
     padding-right: 12px;
   }
@@ -909,13 +924,13 @@ textarea {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__label--wallet {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__label {
     margin-bottom: 10px;
     height: 45px;
@@ -931,7 +946,7 @@ textarea {
   transform: translateY(-50%);
   color: #8E95A0;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__icon {
     left: 12px;
   }
@@ -940,7 +955,7 @@ textarea {
 .form-balance__user-icon {
   font-size: 33.52px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__user-icon {
     font-size: 13px;
   }
@@ -972,7 +987,7 @@ textarea {
     font-size: 20px;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__input {
     padding-left: 39px;
     font-size: 14px;
@@ -1009,7 +1024,7 @@ textarea {
     cursor: pointer;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__modal {
     padding-inline: 11px;
     font-size: 11px;
@@ -1034,7 +1049,7 @@ textarea {
 .form-balance__row:not(:last-child) {
   margin-bottom: 19px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__row:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -1046,7 +1061,7 @@ textarea {
   column-gap: 2px;
   border-radius: 23px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__wallet {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1072,7 +1087,7 @@ textarea {
     padding-right: 29px;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__select {
     padding-inline: 14px;
     height: 40px;
@@ -1093,7 +1108,7 @@ textarea {
   font-family: "MontBold", sans-serif;
   color: #1179F9;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__select .lcslt {
     padding-right: 32px;
   }
@@ -1119,7 +1134,7 @@ textarea {
   line-height: 1;
   font-size: 23px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__select .lcslt:not(.lcslt-multiple)::after {
     font-size: 13px;
     -ms-transform: rotate(90deg) translateX(2px);
@@ -1138,7 +1153,7 @@ textarea {
 .wallet-select .lcslt-f-wallet-select .wallet-target {
   font-size: 27px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .wallet-select .lcslt-f-wallet-select .wallet-target {
     font-size: 16px;
   }
@@ -1166,7 +1181,7 @@ textarea {
   -ms-flex-align: center;
   align-items: center;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .selected-wallet {
     width: 100%;
     -ms-flex-pack: justify;
@@ -1183,7 +1198,7 @@ textarea {
   border-radius: 7px;
   overflow: hidden;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .flag {
     -ms-flex-preferred-size: 35px;
     flex-basis: 35px;
@@ -1217,7 +1232,7 @@ textarea {
 .form-balance__cash-icon {
   font-size: 34px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__cash-icon {
     font-size: 16px;
   }
@@ -1238,7 +1253,7 @@ textarea {
   border-top-left-radius: 23px;
   border-bottom-left-radius: 23px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__summ:first-child .form-balance__summ-val {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -1248,7 +1263,7 @@ textarea {
   border-top-right-radius: 23px;
   border-bottom-right-radius: 23px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__summ:last-child .form-balance__summ-val {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -1278,7 +1293,7 @@ textarea {
   color: #7F8D9A;
   background-color: #E0E0E0;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__summ-val {
     height: 45px;
     font-size: 13px;
@@ -1290,7 +1305,7 @@ textarea {
   display: flex;
   column-gap: 14.48px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__paysystems {
     column-gap: 7px;
   }
@@ -1308,7 +1323,7 @@ textarea {
   flex: 0 0 26.6990291262%;
   position: relative;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .paysystem {
     -ms-flex: 0 0 26.3157894737%;
     flex: 0 0 26.3157894737%;
@@ -1334,7 +1349,7 @@ textarea {
   -ms-flex-align: center;
   align-items: center;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .paysystem--multi {
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
@@ -1364,7 +1379,7 @@ textarea {
   background-color: #D4D4D4;
   border-radius: 23px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .paysystem__val {
     height: 45px;
     border-radius: 10px;
@@ -1376,7 +1391,7 @@ textarea {
 .paysystem__val--sbp img {
   width: 121px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .paysystem__val--sbp img {
     width: auto;
     height: 71.1111111111%;
@@ -1385,7 +1400,7 @@ textarea {
 .paysystem__val--multi {
   padding-inline: 25px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .paysystem__val--multi {
     padding-inline: 9px;
   }
@@ -1393,7 +1408,7 @@ textarea {
 .paysystem__val--pay img {
   width: 111px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .paysystem__val--pay img {
     width: auto;
     height: 68.1818181818%;
@@ -1411,7 +1426,7 @@ textarea {
   -ms-flex-pack: center;
   justify-content: center;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .paysystem__part {
     padding-inline: 6px;
   }
@@ -1430,7 +1445,7 @@ textarea {
   height: 34px;
   background-color: #1179F9;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .paysystem__part:not(:last-child):after {
     height: 16px;
   }
@@ -1447,7 +1462,7 @@ textarea {
     max-width: 80%;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .paysystem__part--mscd img {
     max-width: 60%;
   }
@@ -1478,15 +1493,10 @@ textarea {
 }
 @media only screen and (max-width: 1660px) {
   .form-balance__right {
-    padding-right: 74px;
-  }
-}
-@media only screen and (max-width: 991.98px) {
-  .form-balance__right {
     padding: 38px 24px 30px 30px;
   }
 }
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 1199px) {
   .form-balance__right {
     border-radius: 23px;
   }
@@ -1494,28 +1504,32 @@ textarea {
 .form-balance__right > *:not(:last-child) {
   margin-bottom: 37px;
 }
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__right > *:not(:last-child) {
     margin-bottom: 21px;
   }
 }
 
 .form-balance__table-row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   font-size: 25px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__table-row {
     font-size: 15px;
+  }
+}
+@media only screen and (min-width: 340px) {
+  .form-balance__table-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 .form-balance__table-row:not(:last-child) {
   margin-bottom: 19px;
 }
-@media only screen and (max-width: 991.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__table-row:not(:last-child) {
     margin-bottom: 8px;
   }
@@ -1525,7 +1539,7 @@ textarea {
   -ms-flex: 0 0 371px;
   flex: 0 0 371px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__table-key {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -1535,8 +1549,12 @@ textarea {
 .form-balance__table-val {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
-  text-align: right;
   font-family: "MontBold", sans-serif;
+}
+@media only screen and (min-width: 340px) {
+  .form-balance__table-val {
+    text-align: right;
+  }
 }
 
 .form-balance__buttons {
@@ -1544,7 +1562,7 @@ textarea {
   display: flex;
   column-gap: 20px;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .form-balance__buttons {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -1595,14 +1613,18 @@ textarea {
     background-color: #2986fb;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__button {
     height: 67px;
     font-size: 12px;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
     padding-inline: 20px;
     border-radius: 14px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  .form-balance__button {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
 }
 
@@ -1619,7 +1641,7 @@ textarea {
   border-radius: 50%;
   border: 2px solid #fff;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__button-icon {
     -ms-flex-preferred-size: 36px;
     flex-basis: 36px;
@@ -1640,7 +1662,7 @@ textarea {
   font-size: 22px;
   color: #4E4E4E;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__info-title {
     font-size: 12px;
   }
@@ -1652,7 +1674,7 @@ textarea {
   font-size: 22px;
   line-height: 1.3636363636;
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .form-balance__info-text {
     font-size: 12px;
   }
@@ -1683,7 +1705,7 @@ textarea {
     padding-bottom: calc(10px + 34 * ((100vw - 320px) / 1584));
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .header__inner {
     padding-top: 49px;
     padding-bottom: 20px;
@@ -1703,7 +1725,7 @@ textarea {
     flex-basis: calc(120px + 144 * ((100vw - 320px) / 1584));
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .header__logo {
     -ms-flex-preferred-size: 172px;
     flex-basis: 172px;
@@ -1729,7 +1751,7 @@ textarea {
     column-gap: calc(0px + 24.76 * ((100vw - 320px) / 1584));
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .header__nav {
     display: none;
   }
@@ -1875,7 +1897,7 @@ textarea {
     column-gap: calc(10px + 7.88 * ((100vw - 320px) / 1584));
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .header__socials {
     column-gap: 11.66px;
   }
@@ -1901,7 +1923,7 @@ textarea {
     height: calc(24px + 24 * ((100vw - 320px) / 1584));
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .socials-header__link {
     width: 31px;
     height: 31px;
@@ -1965,7 +1987,7 @@ textarea {
   color: #fff;
   overflow-x: hidden;
 }
-@media only screen and (max-width: 1660px) {
+@media only screen and (max-width: 1600px) {
   .main__container {
     -ms-flex-direction: column;
     flex-direction: column;
@@ -2004,7 +2026,7 @@ textarea {
   background-color: #fff;
   z-index: 2;
 }
-@media only screen and (max-width: 1660px) {
+@media only screen and (max-width: 1600px) {
   .main__container:after {
     display: none;
   }
@@ -2058,7 +2080,7 @@ textarea {
     margin-bottom: calc(0px + 130 * ((100vw - 320px) / 1584));
   }
 }
-@media only screen and (max-width: 1660px) {
+@media only screen and (max-width: 1600px) {
   .main__left {
     padding-bottom: 0;
     padding-left: 50px;
@@ -2069,13 +2091,13 @@ textarea {
     margin-bottom: 28px;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .main__left {
     padding-left: 17px;
     padding-top: 22px;
   }
 }
-@media only screen and (min-width: 1660px) {
+@media only screen and (min-width: 1600px) {
   .main__left {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
@@ -2107,7 +2129,7 @@ textarea {
     padding-left: calc(22px + 49 * ((100vw - 320px) / 1584));
   }
 }
-@media only screen and (max-width: 1660px) {
+@media only screen and (max-width: 1600px) {
   .main__right {
     padding-left: 50px;
     padding-bottom: 65px;
@@ -2124,12 +2146,12 @@ textarea {
     padding-top: 0;
   }
 }
-@media only screen and (max-width: 767.98px) {
+@media only screen and (max-width: 1660px) {
   .main__right {
     padding-left: 17px;
   }
 }
-@media only screen and (min-width: 1660px) {
+@media only screen and (min-width: 1600px) {
   .main__right {
     max-width: none;
     -ms-flex: 0 0 50%;
@@ -2158,7 +2180,7 @@ textarea {
     display: none;
   }
 }
-@media only screen and (min-width: 1660px) {
+@media only screen and (min-width: 1600px) {
   .main__right:after {
     display: none;
   }

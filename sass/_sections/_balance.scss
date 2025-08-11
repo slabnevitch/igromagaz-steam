@@ -1,12 +1,18 @@
 /*--------------------balance----------------------*/
-.balance {}
+.balance {
+	padding-bottom: 53px;
+
+	@include max-screen(767.98px){
+		padding-bottom: 27px;
+	}
+}
 .balance__wrapper {}
 .form {}
 .balance__form {
 	display: flex;
 	gap: 30px;
 
-	@include max-screen($mainStop){
+	@include max-screen(767.98px){
 		flex-direction: column;
 	}
 }
@@ -18,7 +24,7 @@
 	background: #4AB8E6;
 	background: linear-gradient(131deg,rgba(74, 184, 230, 1) 0%, rgba(0, 102, 255, 1) 100%);
 
-	@include max-screen($md){
+	@include max-screen($lg){
 		border-radius: 29px;
 	}
 	@include max-screen($sm){
@@ -544,14 +550,13 @@
 	border-radius: 55px;
 	background-color: #E1E1E1;
 
-	@include max-screen($mainStop){
-		padding-right: 74px;
-	}
-	@include max-screen($md){
+	@include max-screen($sm){
+		// padding-right: 74px;
 		padding: 38px 24px 30px 30px;
 	}
+	
 
-	@include max-screen($md){
+	@include max-screen($lg){
 		border-radius: 23px;
 	}
 
@@ -560,7 +565,7 @@
 		&:not(:last-child){
 			margin-bottom: 37px;
 
-			@include max-screen($md){
+			@include max-screen($sm){
 				margin-bottom: 21px;
 			}
 		}
@@ -568,18 +573,22 @@
 }
 .form-balance__table {}
 .form-balance__table-row {
-	display: flex;
-	justify-content: space-between;
-	font-size: 25px;
+		font-size: 25px;
+
 
 	@include max-screen($sm){
 		font-size: 15px;
+	}
+	@include min-screen(340px){
+		display: flex;
+		justify-content: space-between;
+		
 	}
 	
 	&:not(:last-child){
 		margin-bottom: 19px;
 
-		@include max-screen($md){
+		@include max-screen($sm){
 			margin-bottom: 8px;
 		}
 	}
@@ -593,14 +602,18 @@
 }
 .form-balance__table-val {
 	flex: 0 0 auto;
-	text-align: right;
 	font-family: $bold;
+
+	@include min-screen(340px){
+		text-align: right;
+		
+	}
 }
 .form-balance__buttons {
 	display: flex;
 	column-gap: 20px;
 
-	@include max-screen($sm){
+	@include max-screen($md){
 		flex-direction: column;
 		row-gap: 15px;
 	}
@@ -639,15 +652,15 @@
 		}
 	}
 
-	@include max-screen($md){
-
-	}
 	@include max-screen($sm){
 		height: 67px;
 		font-size: 12px;
-		flex: 0 0 auto;
 		padding-inline: 20px;
 		border-radius: 14px;
+	}
+	@include max-screen($md){
+		flex: 0 0 auto;
+
 	}
 }
 .form-balance__button-icon {
